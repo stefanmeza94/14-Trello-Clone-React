@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import Column from './components/Column';
+import columns from './columns';
 
 function App() {
+  const [index, setIndex] = useState(0);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="trello-wrapper">
+        {columns.map(column => {
+          const {id, title} = column;
+          return <Column key={id} title={title} index={index} setIndex={setIndex} />
+        })}
+      </section>
     </div>
   );
 }

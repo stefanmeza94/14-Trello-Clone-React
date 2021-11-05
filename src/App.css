@@ -1,38 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
 .App {
-  text-align: center;
-}
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+}
+
+.trello-wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+}
+
+.column {
+  border-radius: 10px;
+  flex-basis: 24%;
+  padding: 15px 10px;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+ 
+.title {
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.item-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  border-radius: 12px;
+  border: 1.5px solid white;
+  margin-bottom: 5px;
+  padding: 8px 14px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+}
+
+.item {
   color: white;
+  font-size: 16px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.input-warpper {
+  margin-top: 15px;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  flex-grow: 1;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.btn {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  flex-grow: 1;
+  padding: 6px 10px;
+  border: none;
+  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.dropable-wrapper {
+  min-height: 20px;
 }
